@@ -1,124 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grievance Portal 💖</title>
+    <style>
+      body {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://lh3.googleusercontent.com/d/11ELvrXCWU6HZrLuxztwbnqvbEhs7TW17') no-repeat center center fixed;
+        background-size: cover;
+        backdrop-filter: blur(3px);
+      }
 
-<html>
- <head>  
- </head> 
- <body> 
-  <meta charset="UTF-8"> 
-  <title>Grievance Portal 💖</title> 
-  <style>
-    body {
-      font-family: 'Comic Sans MS', cursive;
-      margin: 0;
-      padding: 0;
-      background: url('https://lh3.googleusercontent.com/d/11ELvrXCWU6HZrLuxztwbnqvbEhs7TW17') no-repeat center center fixed;
-      background-size: cover;
-      backdrop-filter: blur(3px);
-    }
-    .container {
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 30px;
-      margin: 50px auto;
-      border-radius: 20px;
-      max-width: 90%;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      text-align: center;
-    }
-    h1 {
-      color: #ff1493;
-      margin-bottom: 20px;
-    }
-    input, textarea, select {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-    button {
-      background-color: #ff69b4;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #fff0f5;
-      padding: 20px 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      z-index: 999;
-    }
-    .popup h2 {
-      color: #ff1493;
-      margin-bottom: 10px;
-    }
-    .popup p {
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-    .popup button {
-      background-color: #ff1493;
-      color: white;
-      border: none;
-      padding: 8px 20px;
-      border-radius: 8px;
-    }
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 998;
-    }
-  </style> 
-  <div class="container"> 
-   <h1>Submit a Grievance 💅</h1> 
-   <form id="grievanceForm" action="https://formsubmit.co/anirbang456@gmail.com" method="POST"> 
-    <input type="hidden" name="_captcha" value="false"> 
-    <input type="text" name="title" placeholder="Title" required> 
-    <textarea name="complaint" placeholder="What's bothering you?" required></textarea> 
-    <label>Mood:</label> 
-    <select name="mood" required> <option value="Sad">Sad 🥺</option> <option value="Angry">Angry 😡</option> <option value="Annoyed">Annoyed 😤</option> <option value="Mixed">Mixed feelings 🤔</option> <option value="Overwhelmed">Overwhelmed 😩</option> <option value="Lonely">Lonely 😞</option> <option value="Jealous">Jealous 👀</option> <option value="Petty">Feeling petty 👑</option> <option value="Clingy">Clingy 😘</option> <option value="Just Miss You">Just miss you 💭</option> </select> 
-    <label>Severity:</label> 
-    <select name="severity" required> <option value="Low">Just venting 🫠</option> <option value="Medium">A hug would help 🫂</option> <option value="High">I need chocolate 🍫</option> <option value="Extreme">Code Red: I demand cuddles NOW 🧸</option> <option value="Silent Treatment">Brace yourself... silent mode ⚠️</option> <option value="SOS">Send memes and love STAT 🚨</option> <option value="Crisis">This needs a movie night 🎥</option> <option value="Apocalypse">It’s a full-blown relationship emergency 🚁</option> </select> 
-    <input type="text" name="solution" placeholder="Suggested fix (optional)"> 
-    <button type="submit">Submit ❤️</button> 
-   </form> 
-  </div> 
-  <!-- Popup --> 
-  <div class="overlay" id="overlay"></div> 
-  <div class="popup" id="popup"> 
-   <h2>Grievance Received! 💌</h2> 
-   <p>Your complaint has been noted with utmost love and care 💖<br> Expect cuddles, chocolate, or thoughtful responses soon 😉</p> 
-   <button onclick="closePopup()">Close</button> 
-  </div> 
-  <script>
-    const form = document.getElementById('grievanceForm');
-    const popup = document.getElementById('popup');
-    const overlay = document.getElementById('overlay');
+      .container {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 30px;
+        margin: 50px auto;
+        border-radius: 20px;
+        max-width: 90%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
 
-    form.addEventListener('submit', function(event) {
-      popup.style.display = 'block';
-      overlay.style.display = 'block';
-      form.reset();
-    });
+      h1 {
+        color: #ff1493;
+        margin-bottom: 20px;
+      }
 
-    function closePopup() {
-      popup.style.display = 'none';
-      overlay.style.display = 'none';
-    }
-  </script>   
- </body>
+      iframe {
+        width: 100%;
+        max-width: 640px;
+        height: 1910px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Submit a Grievance 💅</h1>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSftWUsbv7HkTtQ0czVK-ldMicypp48GSyZ8ZKPfOBVUOdZ-VQ/viewform?embedded=true"
+        marginheight="0"
+        marginwidth="0"
+        loading="lazy"
+      >
+        Loading…
+      </iframe>
+    </div>
+  </body>
 </html>
